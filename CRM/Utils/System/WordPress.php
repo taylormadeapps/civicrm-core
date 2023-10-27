@@ -393,6 +393,7 @@ class CRM_Utils_System_WordPress extends CRM_Utils_System_Base {
 
       // Build Clean URL.
       if (!empty($path)) {
+        $path = trim($path, "/");
         $base = trailingslashit($base) . str_replace('civicrm/', '', $path) . '/';
       }
       if (!empty($query)) {
